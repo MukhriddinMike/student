@@ -62,7 +62,7 @@ for x in range(len(prediction)):
 
 p = 'G1'
 
-#style.use('ggp')
+style.use('ggplot')
 plt.scatter(data[p], data['G3'])
 plt.xlabel(p)
 plt.ylabel('Final Grade')
