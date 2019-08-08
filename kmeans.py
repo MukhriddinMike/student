@@ -12,6 +12,7 @@ y = digits.target
 k = 10
 samples, features = data.shape
 
+
 def bench_k_means(estimator, name, data):
     estimator.fit(data)
     print('%-9s\t%i\t%.3f\t%.3f\t%.3f\t%.3f\t%.3f\t%.3f'
@@ -24,6 +25,5 @@ def bench_k_means(estimator, name, data):
              metrics.silhouette_score(data, estimator.labels_,
                                       metric='euclidean')))
 
-
-clf = KMeans(n_clusters=k, init='random', n_init=10)
-bench_k_means(clf, '1, data')
+clf = KMeans(n_clusters=k, init="random", n_init=10)
+bench_k_means(clf, "1", data)
